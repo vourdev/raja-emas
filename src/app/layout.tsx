@@ -3,6 +3,7 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import { El_Messiri } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { siteDetails } from "@/data/siteDetails";
+import Script from "next/script";
 
 import "./globals.css";
 
@@ -48,6 +49,11 @@ export default function RootLayout({
         {/* <Header /> */}
         <main>{children}</main>
         <SpeedInsights />
+        <Script
+          src="https://cdn.userway.org/widget.js"
+          data-account="upvZaVgZnC"
+          strategy="lazyOnload"
+        />
         {/* <Footer /> */}
       </body>
     </html>
